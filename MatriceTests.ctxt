@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=MatriceTests
+comment0.text=\n\ The\ test\ class\ MatriceTests.\n\n\ @author\ \ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ GIVEN_newInstance_WHEN_creatingMatrixWithSpeceficDimensions_THEN_EmptyMatrixIsCreated()
+comment2.params=
+comment2.target=void\ GIVEN_newInstance_WHEN_creatingMatrixWithOneNumber_THEN_EmptySquareMatrixIsCreated()
+comment3.params=
+comment3.target=void\ GIVEN_newInstance_WHEN_creatingMatrixFromAnotherMatrix_THEN_CopyOfTheMatrixIsCreated()
+comment4.params=
+comment4.target=void\ GIVEN_newInstance_WHEN_creatingMatrixFromAnotherMatrix_THEN_ExpectDifferentAdressInMemory()
+comment5.params=
+comment5.target=void\ GIVEN_Matrix_WHEN_MatrixIsSquare_THEN_TestSquareMatrixReturnsTrue()
+comment6.params=
+comment6.target=void\ GIVEN_Matrix_WHEN_MatrixIsNotSquare_THEN_TestSquareMatrixReturnsFalse()
+comment7.params=
+comment7.target=void\ GIVEN_Matrix_WHEN_MatriceEstTriangulaireInf\u00E9rieure_THEN_estTriangulaireInf\u00E9rieureReturnsTrue()
+comment8.params=
+comment8.target=void\ GIVEN_Matrix_WHEN_MatriceNEstPasTriangulaireInf\u00E9rieure_THEN_estTriangulaireInf\u00E9rieureReturnsFalse()
+numComments=9
