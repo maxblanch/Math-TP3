@@ -132,7 +132,7 @@ public class MatriceTests
     }
     
     @Test
-    public void GIVEN_Matrix_WHEN_MatriceNEstPasTriangulaireInférieure_THEN_estTriangulaireInférieureReturnsFalse() {
+    public void GIVEN_Matrix_WHEN_Matrice4x4EstTriangulaireInférieure_THEN_estTriangulaireInférieureReturnsTrue() {
         //Arrange
         double[][] b = new double[][]{
               { 1, 0, 0, 0 },
@@ -148,6 +148,165 @@ public class MatriceTests
         //Assert
         final boolean EXPECTED_ANSWER = true;
         final boolean ACTUAL_ANSWER = isMatriceInferieure;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceNEstPasCarree_THEN_estTriangulaireInférieureReturnsFalse() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 1, 0, 0, 0 },
+              { 2, 1, 0, 0 },
+              { 2, 2, 1, 0 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceInferieure = matriceB.estTriangulaireInferieure();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = false;
+        final boolean ACTUAL_ANSWER = isMatriceInferieure;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceCarreeNestPasTriangulaireInferieure_THEN_estTriangulaireInférieureReturnsFalse() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 1, 0, 0, 1 },
+              { 2, 1, 0, 0 },
+              { 2, 2, 1, 0 },
+              { 2, 2, 2, 1 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceInferieure = matriceB.estTriangulaireInferieure();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = false;
+        final boolean ACTUAL_ANSWER = isMatriceInferieure;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceEstTriangulaireSuperieure_THEN_estTriangulaireSuperieureReturnsTrue() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 1, 1, 1, 1 },
+              { 0, 1, 1, 1 },
+              { 0, 0, 1, 1 },
+              { 0, 0, 0, 1 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceSuperieure = matriceB.estTriangulaireSuperieure();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = true;;
+        final boolean ACTUAL_ANSWER = isMatriceSuperieure;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceNEstPasTriangulaireSuperieure_THEN_estTriangulaireSuperieureReturnsFalse() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 1, 1, 1, 1 },
+              { 0, 1, 1, 1 },
+              { 0, 0, 1, 1 },
+              { 4, 1, 0, 1 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceSuperieure = matriceB.estTriangulaireSuperieure();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = false;
+        final boolean ACTUAL_ANSWER = isMatriceSuperieure;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceIsDiagonale_THEN_estDiagonaleReturnsTrue() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 1, 0, 0, 0 },
+              { 0, 3, 0, 0 },
+              { 0, 0, 2, 0 },
+              { 0, 0, 0, 1 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceDiagonale = matriceB.estDiagonale();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = true;
+        final boolean ACTUAL_ANSWER = isMatriceDiagonale;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceIsNotDiagonale_THEN_estDiagonaleReturnsFalse() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 1, 0, 0, 0 },
+              { 0, 0, 0, 0 },
+              { 0, 0, 2, 0 },
+              { 0, 0, 0, 1 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceDiagonale = matriceB.estDiagonale();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = false;
+        final boolean ACTUAL_ANSWER = isMatriceDiagonale;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceScalaire_THEN_estScalaireReturnsTrue() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 8, 0, 0, 0 },
+              { 0, 8, 0, 0 },
+              { 0, 0, 8, 0 },
+              { 0, 0, 0, 8 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceScalaire = matriceB.estScalaire();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = true;
+        final boolean ACTUAL_ANSWER = isMatriceScalaire;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceIsNotScalaire_THEN_estScalaireReturnsFalse() {
+        //Arrange
+        double[][] b = new double[][]{
+              { 8, 0, 0, 0 },
+              { 0, 2, 0, 0 },
+              { 0, 0, 8, 0 },
+              { 0, 0, 0, 8 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean isMatriceScalaire = matriceB.estScalaire();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = false;
+        final boolean ACTUAL_ANSWER = isMatriceScalaire;
         assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
     }
 }

@@ -2,10 +2,10 @@
 dependency1.from=MatriceTests
 dependency1.to=Matrice
 dependency1.type=UsesDependency
-editor.fx.0.height=1050
+editor.fx.0.height=1027
 editor.fx.0.width=1680
 editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.y=23
 objectbench.height=101
 objectbench.width=776
 package.divider.horizontal=0.6

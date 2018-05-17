@@ -105,22 +105,64 @@ public class Matrice {
 
     public boolean estTriangulaireInferieure() {
         if(!this.estCarree()) return false;
-        boolean estTrianglulaireInferieure = false;
+        boolean estTrianglulaireInferieure = true;
+        int indexBlocker = 1;
+        for(int i=0; i<this.getNbLignes(); i++) {
+            for(int j=this.getNbColonnes() - 1; j>indexBlocker; j--) {
+                if(this.getElement(i,j) != 0) {
+                    estTrianglulaireInferieure = false;
+                    break;
+                }
+            }
+            indexBlocker++;
+        }
         return estTrianglulaireInferieure;
     }
     
     public boolean estTriangulaireSuperieure() {
-        // TODO
-        return true;
+        if(!this.estCarree()) return false;
+        boolean estTrianglulaireSuperieure = true;
+        int indexBlocker = this.getNbLignes() - 1;
+        for(int i=this.getNbLignes() - 1; i>0; i--) {
+            for(int j=0; j<indexBlocker; j++) {
+                if(this.getElement(i,j) != 0) {
+                    estTrianglulaireSuperieure = false;
+                    break;
+                }
+            }
+            indexBlocker--;
+        }
+        return estTrianglulaireSuperieure;
     }
     
     public boolean estDiagonale() {
-        // TODO
-        return true;
+        boolean estDiagonale = false;
+        if(this.estTriangulaireInferieure()) {
+            if(this.estTriangulaireSuperieure()) {
+                estDiagonale = true;
+                int diagonaleIndex = 0;
+                for(int i=0; i<this.getNbLignes(); i++) {
+                    if(this.getElement(i,diagonaleIndex) == 0) {
+                        estDiagonale = false;
+                        break;
+                    }
+                    diagonaleIndex++;
+                }
+            }
+        }
+        return estDiagonale;
     }
 
     public boolean estScalaire() {
-        // TODO
+        if(!estDiagonale()) return false;
+        int diagonaleIndex = 0;
+        double nombreScalaire = this.getElement(0,0);
+        for(int i=0; i<this.getNbLignes(); i++) {
+            if(this.getElement(i,diagonaleIndex) != nombreScalaire) {
+                return false;
+            }
+            diagonaleIndex++;
+        }
         return true;
     }
     
