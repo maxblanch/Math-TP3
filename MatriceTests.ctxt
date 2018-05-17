@@ -1,34 +1,54 @@
 #BlueJ class context
 comment0.target=MatriceTests
-comment0.text=\r\n\ The\ test\ class\ MatriceTests.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ The\ test\ class\ MatriceTests.\n\n\ @author\ \ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ GIVEN_newInstance_WHEN_creatingMatrixWithSpeceficDimensions_THEN_EmptyMatrixIsCreated()
 comment10.params=
-<<<<<<< HEAD
-comment10.target=void\ GIVEN_Matrix_WHEN_MatriceIsntNulle_THEN_estNulleReturnsfalse()
+comment10.target=void\ GIVEN_Matrix_WHEN_MatriceNEstTriangulaireSuperieure_THEN_estSuperieureReturnsFalse()
 comment11.params=
-comment11.target=void\ GIVEN_Matrix_WHEN_MatriceEstLigne_THEN_estLigneReturnsTrue()
+comment11.target=void\ GIVEN_Matrix_WHEN_MatriceEstDiagonale_THEN_estDiagonale()
 comment12.params=
-comment12.target=void\ GIVEN_Matrix_WHEN_MatriceNestPasLigne_THEN_estLigneReturnsFalse()
-=======
-comment10.target=void\ GIVEN_Matrix_WHEN_MatriceCarreeNestPasTriangulaireInferieure_THEN_estTriangulaireInf\u00E9rieureReturnsFalse()
-comment11.params=
-comment11.target=void\ GIVEN_Matrix_WHEN_MatriceEstTriangulaireSuperieure_THEN_estTriangulaireSuperieureReturnsTrue()
-comment12.params=
-comment12.target=void\ GIVEN_Matrix_WHEN_MatriceNEstPasTriangulaireSuperieure_THEN_estTriangulaireSuperieureReturnsFalse()
+comment12.target=void\ GIVEN_Matrix_WHEN_MatriceNEstPasDiagonale_THEN_estDiagonaleReturnFalse()
 comment13.params=
-comment13.target=void\ GIVEN_Matrix_WHEN_MatriceIsDiagonale_THEN_estDiagonaleReturnsTrue()
+comment13.target=void\ GIVEN_Matrix_WHEN_MatriceEstScalaire_THEN_estScalaireReturnsTrue()
 comment14.params=
-comment14.target=void\ GIVEN_Matrix_WHEN_MatriceIsNotDiagonale_THEN_estDiagonaleReturnsFalse()
+comment14.target=void\ GIVEN_Matrix_WHEN_MatriceNEstScalaire_THEN_estScalaireReturnsFalse()
 comment15.params=
-comment15.target=void\ GIVEN_Matrix_WHEN_MatriceScalaire_THEN_estScalaireReturnsTrue()
+comment15.target=void\ GIVEN_Matrix_WHEN_PermuterDeuxLignes_THEN_LesLignesSontInvers\u00E9es()
 comment16.params=
-comment16.target=void\ GIVEN_Matrix_WHEN_MatriceIsNotScalaire_THEN_estScalaireReturnsFalse()
->>>>>>> 1b99118bcd9a435f4b4c3837f788e05cbbb4789b
+comment16.target=void\ GIVEN_Matrix_WHEN_PermuterDeuxLignes_THEN_LesLignesSontInvers\u00E9esTest2()
+comment17.params=
+comment17.target=void\ GIVEN_Matrix_WHEN_MultiplierUneLigne_THEN_LaLigneDuTableauEstMultipli\u00E9ParUnScalaire()
+comment18.params=
+comment18.target=void\ GIVEN_Matrix_WHEN_MultiplierUneLigne_THEN_LaLigneDuTableauEstMultipli\u00E9ParUnScalaireTest2()
+comment19.params=
+comment19.target=void\ GIVEN_Matrix_WHEN_AjoutdUnMultipleDunAutreLigne_THEN_LaLigneDuTableauEstAdditionn\u00E9ParLautreLigne()
 comment2.params=
 comment2.target=void\ GIVEN_newInstance_WHEN_creatingMatrixWithOneNumber_THEN_EmptySquareMatrixIsCreated()
+comment20.params=
+comment20.target=void\ GIVEN_Matrix_WHEN_AjoutdUnMultipleDunAutreLigne_THEN_LaLigneDuTableauEstAdditionn\u00E9ParLautreLigneTest2()
+comment21.params=
+comment21.target=void\ GIVEN_Matrix_WHEN_Transpose3x2Matrix_THEN_MatriceEstTransposeeBecomes2x3()
+comment22.params=
+comment22.target=void\ GIVEN_Matrix_WHEN_Transpose3x3Matrix_THEN_MatriceEstTransposeeBecomes3x3()
+comment23.params=
+comment23.target=void\ GIVEN_Matrix_WHEN_Adding3x3Matrices_THEN_ReturnsAddedMatriceResults()
+comment24.params=
+comment24.target=void\ GIVEN_Matrix_WHEN_Adding2x3Matrices_THEN_ReturnsAddedMatriceResults()
+comment25.params=
+comment25.target=void\ GIVEN_Matrix_WHEN_Adding2x3Matrices_THEN_CheckIfOriginalMatriceIsIntact()
+comment26.params=
+comment26.target=void\ GIVEN_Matrix_WHEN_MultiplyMatriceParScalaire_THEN_ReturnsNewMatrixMultipledByScalar()
+comment27.params=
+comment27.target=void\ GIVEN_Matrix_WHEN_MultiplyMatriceParScalaire_THEN_ReturnsNewMatrixMultipledByScalarTest2()
+comment28.params=
+comment28.target=void\ GIVEN_Matrix_WHEN_MultiplyMatriceParScalaire_THEN_OriginalMatrixStaysTheSame()
+comment29.params=
+comment29.target=void\ GIVEN_Matrix_WHEN_MultiplyMatriceParUneAutreMatrice_THEN_newMatrixisReturned()
 comment3.params=
 comment3.target=void\ GIVEN_newInstance_WHEN_creatingMatrixFromAnotherMatrix_THEN_CopyOfTheMatrixIsCreated()
+comment30.params=
+comment30.target=void\ GIVEN_Matrix_WHEN_MultiplyMatriceParUneAutreMatrice_THEN_newMatrixisReturnedTest2()
 comment4.params=
 comment4.target=void\ GIVEN_newInstance_WHEN_creatingMatrixFromAnotherMatrix_THEN_ExpectDifferentAdressInMemory()
 comment5.params=
@@ -38,14 +58,7 @@ comment6.target=void\ GIVEN_Matrix_WHEN_MatrixIsNotSquare_THEN_TestSquareMatrixR
 comment7.params=
 comment7.target=void\ GIVEN_Matrix_WHEN_MatriceEstTriangulaireInf\u00E9rieure_THEN_estTriangulaireInf\u00E9rieureReturnsTrue()
 comment8.params=
-<<<<<<< HEAD
 comment8.target=void\ GIVEN_Matrix_WHEN_MatriceNEstPasTriangulaireInf\u00E9rieure_THEN_estTriangulaireInf\u00E9rieureReturnsFalse()
 comment9.params=
-comment9.target=void\ GIVEN_Matrix_WHEN_MatriceEstNulle_THEN_estNulleReturnsTrue()
-numComments=13
-=======
-comment8.target=void\ GIVEN_Matrix_WHEN_Matrice4x4EstTriangulaireInf\u00E9rieure_THEN_estTriangulaireInf\u00E9rieureReturnsTrue()
-comment9.params=
-comment9.target=void\ GIVEN_Matrix_WHEN_MatriceNEstPasCarree_THEN_estTriangulaireInf\u00E9rieureReturnsFalse()
-numComments=17
->>>>>>> 1b99118bcd9a435f4b4c3837f788e05cbbb4789b
+comment9.target=void\ GIVEN_Matrix_WHEN_MatriceEstTriangulaireSuperieure_THEN_estSuperieureReturnsTrue()
+numComments=31

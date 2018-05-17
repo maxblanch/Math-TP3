@@ -2,29 +2,20 @@
 dependency1.from=MatriceTests
 dependency1.to=Matrice
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=788
-editor.fx.0.width=1386
-editor.fx.0.x=0
-editor.fx.0.y=0
-objectbench.height=121
-objectbench.width=1342
-=======
 editor.fx.0.height=1027
 editor.fx.0.width=1680
 editor.fx.0.x=0
 editor.fx.0.y=23
 objectbench.height=101
 objectbench.width=776
->>>>>>> 1b99118bcd9a435f4b4c3837f788e05cbbb4789b
 package.divider.horizontal=0.6
-package.divider.vertical=0.8012422360248447
-package.editor.height=509
-package.editor.width=1252
-package.editor.x=-8
-package.editor.y=-8
-package.frame.height=744
-package.frame.width=1382
+package.divider.vertical=0.8007380073800738
+package.editor.height=427
+package.editor.width=674
+package.editor.x=304
+package.editor.y=292
+package.frame.height=600
+package.frame.width=800
 package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
@@ -48,6 +39,6 @@ target2.name=MatriceTests
 target2.showInterface=false
 target2.type=UnitTestTargetJunit4
 target2.typeParameters=
-target2.width=100
+target2.width=110
 target2.x=160
 target2.y=10

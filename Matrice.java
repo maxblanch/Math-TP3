@@ -105,18 +105,18 @@ public class Matrice {
 
     public boolean estTriangulaireInferieure() {
         if(!this.estCarree()) return false;
-        boolean estTrianglulaireInferieure = true;
+        boolean estTrianglulaireInf = true;
         int indexBlocker = 1;
         for(int i=0; i<this.getNbLignes(); i++) {
             for(int j=this.getNbColonnes() - 1; j>indexBlocker; j--) {
                 if(this.getElement(i,j) != 0) {
-                    estTrianglulaireInferieure = false;
+                    estTrianglulaireInf = false;
                     break;
                 }
             }
             indexBlocker++;
         }
-        return estTrianglulaireInferieure;
+        return estTrianglulaireInf;
     }
     
     public boolean estTriangulaireSuperieure() {
@@ -201,7 +201,16 @@ public class Matrice {
      * L_i <-> L_j
      */
     public void permuteLigne(int i, int j) {
-        // TODO
+        double[] ligneTampon = new double[this.getNbColonnes()];
+        for(int k=0; k<this.getNbColonnes(); k++) {
+            ligneTampon[k] = this.a[i][k];
+        }
+        for(int k=0; k<this.getNbColonnes(); k++) {
+            this.a[i][k] = this.a[j][k];
+        }
+        for(int k=0; k<this.getNbColonnes(); k++) {
+            this.a[j][k] = ligneTampon[k];
+        }
     }
 
     /**
@@ -210,7 +219,9 @@ public class Matrice {
      * L_i <- d * L_i
      */
     public void multiplieLigne(int i, double d) {
-        // TODO
+        for(int k=0; k<this.getNbColonnes(); k++) {
+            this.a[i][k] = this.a[i][k] * d;
+        }
     }
 
     /**
@@ -219,7 +230,9 @@ public class Matrice {
      * L_i <- L_i + d * L_j
      */
     public void ajouteMultipleLigne(int i, int j, double d) {
-        // TODO
+        for(int k=0; k<this.getNbColonnes(); k++) {
+            this.a[i][k] = this.a[i][k] + (this.a[j][k] * d);
+        }
     }
 
     /**
@@ -242,7 +255,13 @@ public class Matrice {
      * Retourne la matrice transposee de la matrice passee en argument
      */
     public Matrice transpose(Matrice mat) {
-        // TODO
+        double[][] copieMatrice = new double[mat.getNbColonnes()][mat.getNbLignes()];
+        for(int i=0; i<mat.getNbLignes(); i++) {
+            for(int j=0; j<mat.getNbColonnes(); j++) {
+                copieMatrice[j][i] = mat.getElement(i,j);
+            }
+        }
+        mat.a = copieMatrice;
         return mat;
     }
     
@@ -251,8 +270,13 @@ public class Matrice {
      * Retourne la matrice obtenue (la matrice de depart est inchangee : une nouvelle matrice est creee)
      */
     public Matrice multiplieScalaire(double k) {
-        // TODO
-        return null;
+        Matrice matriceC = new Matrice(this.getNbLignes(), this.getNbColonnes());
+        for(int i=0; i<getNbLignes(); i++) {
+            for(int j=0; j<getNbColonnes(); j++) {
+                matriceC.a[i][j] = this.getElement(i,j) * k;
+            }
+        }
+        return matriceC;
     }
     
     /**
@@ -260,8 +284,13 @@ public class Matrice {
      * Retourne la matrice somme (la matrice de depart est inchangee : une nouvelle matrice est creee)
      */
     public Matrice additionMatrices(Matrice b) {
-        // TODO
-        return null;
+        Matrice matriceC = new Matrice(b.getNbLignes(), b.getNbColonnes());
+        for(int i=0; i<getNbLignes(); i++) {
+            for(int j=0; j<getNbColonnes(); j++) {
+                matriceC.a[i][j] = this.getElement(i,j) + b.getElement(i,j);
+            }
+        }
+        return matriceC;
     }
     
     /**
@@ -269,8 +298,19 @@ public class Matrice {
      * Retourne la matrice produit (la matrice de depart est inchangee : une nouvelle matrice est creee)
      */
     public Matrice multiplieMatrices(Matrice b) {
-        // TODO
-        return null;
+        Matrice matriceC = new Matrice(this.getNbLignes(), b.getNbColonnes());
+        int colonne = 0;
+        for(int i=0; i<this.getNbLignes(); i++) {
+            int number = 0;
+            for(int j=0; j<b.getNbColonnes(); j++) {
+                for(int k=0; k<this.getNbColonnes(); k++) {
+                    number += this.getElement(i,k) * b.getElement(j % b.getNbColonnes(),i);
+                }
+            }
+            matriceC.a[i][colonne % matriceC.getNbColonnes()] = number;
+            colonne++;
+        }
+        return matriceC;
     }
     
     public void question1() {
