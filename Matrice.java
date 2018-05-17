@@ -125,13 +125,22 @@ public class Matrice {
     }
     
     public boolean estNulle() {
-        // TODO
-        return true;
+        boolean estNulle = true;       
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if(this.getElement(i,j) !=0){
+                    estNulle = false;
+                }
+            }
+        }
+        return estNulle;
     }
 
     public boolean estLigne() {
-        // TODO
-        return true;
+        if(this.getNbLignes() == 1){
+            return true;
+        }
+        return false;
     }
     
     public boolean estColonne() {

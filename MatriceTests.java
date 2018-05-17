@@ -150,4 +150,79 @@ public class MatriceTests
         final boolean ACTUAL_ANSWER = isMatriceInferieure;
         assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
     }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceEstNulle_THEN_estNulleReturnsTrue(){
+        //Arrange
+        double[][] b = new double[][]{
+              { 0, 0, 0, 0 },
+              { 0, 0, 0, 0 },
+              { 0, 0, 0, 0 },
+              { 0, 0, 0, 0 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean estNulle = matriceB.estNulle();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = true;
+        final boolean ACTUAL_ANSWER = estNulle;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceIsntNulle_THEN_estNulleReturnsfalse(){
+        //Arrange
+        double[][] b = new double[][]{
+              { 0, 0, 0, 0 },
+              { 0, 1, 0, 0 },
+              { 0, 0, 0, 0 },
+              { 0, 0, 0, 0 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean estNulle = matriceB.estNulle();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = false;
+        final boolean ACTUAL_ANSWER = estNulle;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceEstLigne_THEN_estLigneReturnsTrue(){
+        //Arrange
+        double[][] b = new double[][]{
+              { 0, 0, 0, 0 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean estLigne = matriceB.estLigne();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = true;
+        final boolean ACTUAL_ANSWER = estLigne;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
+    
+    @Test
+    public void GIVEN_Matrix_WHEN_MatriceNestPasLigne_THEN_estLigneReturnsFalse(){
+        //Arrange
+        double[][] b = new double[][]{
+              { 0, 0, 0, 0 },
+              { 0, 0, 0, 0 }
+        };
+        Matrice matriceB = new Matrice(b);
+        
+        //Act
+        boolean estLigne = matriceB.estLigne();
+        
+        //Assert
+        final boolean EXPECTED_ANSWER = false;
+        final boolean ACTUAL_ANSWER = estLigne;
+        assertEquals(EXPECTED_ANSWER, ACTUAL_ANSWER);
+    }
 }
